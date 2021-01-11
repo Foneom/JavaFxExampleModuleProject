@@ -11,12 +11,14 @@ import java.io.IOException;
 public class Main extends Application {
 
     public static void main(String[] args) {
-        launch();
+        Application.launch(args);
     }
 
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/primary.fxml"));
-        stage.setScene(new Scene(root));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+     //   scene.getStylesheets().add(getClass().getResource("/application.css").toExternalForm());
         stage.show();
     }
 }
